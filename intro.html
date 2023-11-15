@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./ej1.html" rel="next">
-<link href="./references.html" rel="prev">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,12 +109,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Taller</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Resumen</span></a>
   </div>
@@ -129,6 +123,30 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./ej2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ejemplo 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ej3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ejemplo 3</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ej4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ejemplo 4</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ej5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ejemplo 5</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Taller</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -201,7 +219,7 @@ DATOS&amp;&amp;&amp;\\
 \end{array}
 \]</span> <strong>El nivel de significancia</strong>, <span class="math inline">\(\alpha\)</span> está definido como la máxima probabilidad de cometer el error tipo I. Esto es:</p>
 <p><span class="math display">\[\alpha=_{Máx}P(Error \;tipo\;I)=P(Rechazar\; H_0\; dado\;que\; H_a\; es \;verdadera)\]</span></p>
-<p>Este valor siempre es propuesto por quien realiza el contraste de hipótesis.</p>
+<p>Este valor siempre es propuesto por quien realiza el contraste de hipótesis, en valores relativamente cercanos a cero.</p>
 <p>La probabilidad del error tipo II se define como <span class="math inline">\(\beta\)</span></p>
 <p><span class="math display">\[\beta(\theta_a)=P(Error \;tipo\;II)=P(No \;Rechazar\; H_0\; dado\;que\; H_a\; es \;verdadera)\]</span> <em>Potencia del contraste</em></p>
 <p><span class="math display">\[Potencia(\theta_a)=1-\beta=P(Rechazar \; H_0\; dado\;que\; H_a\; es \;verdadera)\]</span></p>
@@ -211,18 +229,17 @@ DATOS&amp;&amp;&amp;\\
 <p>Valor P = P_Value = <span class="math inline">\(\hat \alpha\)</span> = Significancia Observada</p>
 <p>El valor p es una medida que se utiliza en el contraste de hipótesis para evaluar la evidencia en contra de la hipótesis nula. La hipótesis nula (denotada como <span class="math inline">\(H_0\)</span>) es una afirmación inicial que se somete a prueba y se asume cierta a menos que la muestra aleatoria demuestre lo contrario. La hipótesis alternativa (denotada como <span class="math inline">\(H_1\)</span> o <span class="math inline">\(H_a\)</span>) representa la afirmación que se está tratando de respaldar con los datos.</p>
 <p>En general, el valor P es el nivel de significancia mínima que conduce al rechazo de la Hipótesis nula; es la probabilidad de existencia del estadístico de prueba, si se está cumpliendo la hipótesis nula. Con esto, mientras más grande sea el valor P, más creible resulta la <span class="math inline">\(H_0\)</span>. Mientras más pequeño sea el valor P, más evidencia se cuenta en contra de la <span class="math inline">\(H_0\)</span>, más contundente es el rechazo de <span class="math inline">\(H_0\)</span>.</p>
-<p>$$</p>
-<span class="math display">\[\begin{array}{l|c}
+<p><span class="math display">\[
+\begin{array}{l|c}
 &amp;Hipótesis \;alterna &amp; \hat \alpha = Valor \; P \\ \hline
 &amp;H_a: \theta \gt \theta_0 &amp; P(Estadístico \;de\; Prueba \gt V.A.) \\
 &amp;&amp;&amp;\\
 &amp;H_a: \theta \lt \theta_0 &amp; P(Estadístico \;de\; Prueba \lt V.A.) \\
 &amp;&amp;&amp;\\
 &amp;H_a: \theta \ne \theta_0 &amp; 2*P(\lvert{Estadístico \;de\; Prueba}\lvert \gt \lvert{V.A.}\lvert)\\
-
 \hline
-\end{array}\]</span>
-<p>$$</p>
+\end{array}
+\]</span></p>
 <p><strong>Formulas para Contrastes de Hipótesis</strong></p>
 $$
 <span class="math display">\[\begin{array}{lclc}
@@ -307,7 +324,6 @@ H_a:\mu_1 \ne \mu_2&amp;t_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{S_1^2}{n_
 &amp;&amp; v=\frac{ \left ( \frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}\right)^2}{\frac{\left (\frac{S_1^2}{n_1}\right)^2}{n_1-1}+\frac{\left (\frac{S_2^2}{n_2}\right)^2}{n_2-1}}&amp;  \\
 \hline \\
 \hline \\
-
 
 \end{array}\]</span>
 <p>$$</p>
@@ -566,8 +582,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./references.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Taller</span>
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefacio</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

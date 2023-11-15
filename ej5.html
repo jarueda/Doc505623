@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Doc505623 - Ejemplo 4</title>
+<title>Doc505623 - Ejemplo 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ej5.html" rel="next">
-<link href="./ej3.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./ej4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ej4.html">Ejemplo 4</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ej5.html">Ejemplo 5</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -167,13 +167,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ej4.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ej4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ejemplo 4</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ej5.html" class="sidebar-item-text sidebar-link">
+  <a href="./ej5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Ejemplo 5</span></a>
   </div>
 </li>
@@ -208,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ejemplo 4</h1>
+<h1 class="title">Ejemplo 5</h1>
 </div>
 
 
@@ -226,40 +226,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Se desea contrastar si un tratamiento cambia el contenido medio de fosforo en el suelo. Se necesita saber si el contenido del elemento difiere entre dos parcelas experimetales. En cada parcela, marcadas como 1 y 2 se toman varias lecturas y se obtienen los siguientes valores:</p>
 <hr>
 <span class="math display">\[\begin{array}{|c|r|r|} \hline                   
-    i&amp;  X_1 &amp;   X_2 \\ \hline
-1   &amp;   2.4 &amp;   1.2 \\
-2   &amp;   3.9 &amp;   1.9 \\
-3   &amp;   3.3 &amp;   2.2 \\
-4   &amp;   2.5 &amp;   2.2 \\
-5   &amp;   2.9 &amp;   4.4 \\
-6   &amp;   4.07    &amp;   2.7 \\
-7   &amp;   3.9 &amp;   2.6 \\
-8   &amp;   4   &amp;   2.8 \\
-9   &amp;   3.1 &amp;   2.5 \\
+i   &amp;   X_1   &amp; X_2 \\ \hline
+1     &amp; 2.4   &amp; 1.2 \\
+2     &amp; 3.9   &amp; 1.9 \\
+3     &amp; 3.3   &amp; 2.2 \\
+4     &amp; 2.5   &amp; 2.2 \\
+5     &amp; 2.9   &amp; 4.4 \\
+6     &amp; 4.07    &amp;   2.7 \\
+7     &amp; 3.9   &amp; 2.6 \\
+8     &amp; 4       &amp;   2.8 \\
+9     &amp; 3.1   &amp; 2.5 \\
 10  &amp;   4.2 &amp;   2.3 \\
 11  &amp;   3.6 &amp;   1.4 \\
 12  &amp;   3.6 &amp;   1.3 \\
 13  &amp;   2.7 &amp;   3.4 \\
 14  &amp;   3.4 &amp;   2.6 \\
 15  &amp;   2.8 &amp;   3.2 \\
-16  &amp;   3.8 &amp;   2.9 \\
-17  &amp;   2.3 &amp;   2.6 \\
-18  &amp;   2.8 &amp;   2.5 \\
-19  &amp;   3   &amp;   2.2 \\
-20  &amp;   3.9 &amp;   0.9 \\
-21  &amp;   2.2 &amp;   2.9 \\
-22  &amp;   2.3 &amp;   2.5 \\
-23  &amp;   4.1 &amp;   2.8 \\
-24  &amp;   2.6 &amp;   2.1 \\
-25  &amp;   2.3 &amp;   1.2 \\
-26  &amp;   3.4 &amp;   3   \\
-27  &amp;   3.8 &amp;   0.8 \\
-28  &amp;   2   &amp;   1.5 \\
-29  &amp;   3.6 &amp;   1.5 \\
-30  &amp;   2.1 &amp;   1.4 \\
-31  &amp;   4   &amp;       \\
-32  &amp;   2.7 &amp;       \\
-33  &amp;   4   &amp;       \\ \hline
+16  &amp;       &amp;   2.9 \\
+17  &amp;       &amp;   2.6 \\
+18  &amp;       &amp;   2.5 \\ \hline
 \end{array}\]</span>
 <hr>
 <hr>
@@ -267,61 +252,99 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span class="math display">\[ H_0: \mu_1 \le \mu_2 \;\;\; \leftrightarrow  \;\;\; H_0:\mu_1 - \mu_2 \le 0\]</span></p>
 <p><span class="math display">\[H_a: \mu_1 \gt \mu_2 \;\;\; \leftrightarrow \;\;\; H_a:\mu_1 - \mu_2 \gt 0\]</span></p>
 <hr>
-<p>Se calcula el estadístico de prueba…</p>
-<p><span class="math display">\[
-Z_c =\frac{\bar x_1- \bar x_1}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} } }=\frac{3.8718- 2.25}{\sqrt{\frac{14.8635}{33}+\frac{13.003}{30} } }=1.725098
-\]</span></p>
-<p>Se estima el valor de la significancia observada…</p>
-<p><span class="math display">\[\hat \alpha=P(Z \gt Z_c )\]</span> <span class="math display">\[\hat \alpha=P(Z \gt 1.725098)= 0.0422549\]</span></p>
+<p>Primero se contrasta la hipótesis de heterocedasticidad</p>
+<p><span class="math display">\[ H_0: \sigma^2_1 = \sigma^2_2 \;\;\; \leftrightarrow  \;\;\; H_0: \frac{\sigma^2_2}{\sigma^2_1}  =1\]</span></p>
+<p><span class="math display">\[H_0: \sigma^2_1 \ne  \sigma^2_2 \;\;\; \leftrightarrow  \;\;\; H_0: \frac{\sigma^2_2}{\sigma^2_1} \ne 1\]</span></p>
+<p>Se calcula el estadístico de prueba para el cociente de varianzas …</p>
+<p><span class="math display">\[F_c=\frac{S_2^2}{S_1^2}=\frac{0.5967647}{0.3580314}=1.666794\]</span></p>
+<p>Para este contraste el valor de la significancia observada es:</p>
+<p><span class="math display">\[\hat\alpha=0.169704\]</span></p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>contraste.Z <span class="ot">&lt;-</span> <span class="cf">function</span>(y1,y2){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>               media1 <span class="ot">&lt;-</span> <span class="fu">mean</span>(y1)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>               varianza <span class="ot">&lt;-</span> <span class="fu">var</span>(y1);desviac <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(varianza)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>               EE <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(varianza<span class="sc">/</span><span class="fu">length</span>(y1))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>               media2 <span class="ot">&lt;-</span> <span class="fu">mean</span>(y2)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>               varianza2 <span class="ot">&lt;-</span> <span class="fu">var</span>(y2);desviac2 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(varianza2)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>               EE2 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(varianza2<span class="sc">/</span><span class="fu">length</span>(y2))</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>               EE.d.diferenc <span class="ot">=</span> <span class="fu">sqrt</span>(varianza<span class="sc">/</span><span class="fu">length</span>(y1) <span class="sc">+</span> varianza2<span class="sc">/</span><span class="fu">length</span>(y2))</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>               Zc <span class="ot">&lt;-</span> (media1<span class="sc">-</span>media2)<span class="sc">/</span>EE.d.diferenc</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>               p <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(Zc)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">M1=</span>media1, <span class="at">M2=</span>media2,<span class="at">Varianza=</span>varianza,              <span class="at">Varianza2=</span>varianza2,<span class="at">ErrorEstand1=</span>EE,                    <span class="at">ErrorEstand2=</span>EE2, <span class="at">EE.d.diferenc =</span> EE.d.diferenc, <span class="at">Zc =</span> Zc, <span class="at">Acumulado.de.Z =</span> p, <span class="at">dif.crit =</span> <span class="fu">qnorm</span>(<span class="fl">0.95</span>)<span class="sc">*</span>EE.d.diferenc)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(result)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.4</span>, <span class="fl">3.9</span>, <span class="fl">3.3</span>, <span class="dv">25</span>, <span class="fl">2.9</span>, <span class="fl">4.07</span>, <span class="fl">3.9</span>, <span class="dv">4</span>, <span class="fl">3.1</span>, <span class="fl">4.2</span>, <span class="fl">3.6</span>, <span class="fl">3.6</span>, <span class="fl">2.7</span>, <span class="fl">3.4</span>, <span class="fl">2.8</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fl">3.8</span>, <span class="fl">2.3</span>, <span class="fl">2.8</span>, <span class="dv">3</span>, <span class="fl">3.9</span>, <span class="fl">2.2</span>, <span class="fl">2.3</span>, <span class="fl">4.1</span>, <span class="fl">2.6</span>, <span class="fl">2.3</span>, <span class="fl">3.4</span>, <span class="fl">3.8</span>, <span class="dv">2</span> , <span class="fl">3.6</span>, <span class="fl">2.1</span>, <span class="dv">4</span>, <span class="fl">2.7</span>, <span class="dv">4</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>y2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="fl">1.9</span>, <span class="fl">2.2</span>, <span class="fl">2.2</span>, <span class="fl">4.4</span>, <span class="fl">2.7</span>, <span class="fl">2.6</span>, <span class="fl">2.8</span>, <span class="fl">2.5</span>, <span class="fl">2.3</span>, <span class="fl">1.4</span>, <span class="fl">1.3</span>, <span class="fl">3.4</span>, <span class="fl">2.6</span>, <span class="fl">3.2</span>, <span class="fl">2.9</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fl">2.6</span>, <span class="fl">2.5</span>, <span class="fl">2.2</span>, <span class="fl">0.9</span>, <span class="fl">2.9</span>, <span class="fl">2.5</span>, <span class="fl">2.8</span>, <span class="fl">2.1</span>, <span class="fl">1.2</span>, <span class="dv">3</span>, <span class="fl">0.8</span>, <span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">1.4</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>R <span class="ot">&lt;-</span> <span class="fu">contraste.Z</span>(y1,y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pf</span>(<span class="fl">1.666794</span>,<span class="dv">17</span>,<span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.169704</code></pre>
+</div>
+</div>
+<p>Por lo que se puede inferir que no hay evidencia de Heterocedasticidad (<span class="math inline">\(\hat\alpha=0.169704\)</span>).</p>
+<p>Note que si se fija un nivel de significancia, <span class="math inline">\(\alpha=0.05\)</span>, el valor del percentil teórico crítico es <span class="math inline">\(f_{17;14;0.95}=2.428179\)</span> y, con esto, <span class="math inline">\(F_c&lt;f_{17;14;0.95} \;\;\)</span> lo que también lleva a declarar, con un nivel de significancia del 5%, que no hay evedencia de heterocedasticidad.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qf</span>(.<span class="dv">95</span>,<span class="dv">17</span>,<span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.428179</code></pre>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="valor-p-de-f.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Valor Para el contraste de hipótesis sobre homocedasticidad</figcaption>
+</figure>
+</div>
+<hr>
+<hr>
+<p>Ahora pasamos al contraste de hipótesis para la diferencia de medias.</p>
+<p><span class="math display">\[
+t_c =\frac{\bar x_1- \bar x_1}{\sqrt{S_p^2(\frac{1}{n_1}+\frac{1}{n_2}) } }=\frac{3.358- 2.4833}{\sqrt{0.2444596(\frac{1}{18}+\frac{1}{15}) } }=3.577959
+\]</span> A este estadígrafo se el asocian 31 grados de libertad, por lo que se estima el valor de la significancia observada en :</p>
+<p><span class="math display">\[\hat \alpha=P(t_{31} \gt t_c )=P(t_{31} \gt 3.577959)=0.0005809866\]</span></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pt</span>(<span class="fl">3.577959</span>,<span class="dv">31</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0005809866</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>contraste.f <span class="ot">&lt;-</span> <span class="cf">function</span>(y1,y2){</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>               n1<span class="ot">&lt;-</span> <span class="fu">length</span>(y1)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>               varianza <span class="ot">&lt;-</span> <span class="fu">var</span>(y1)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>               n2<span class="ot">&lt;-</span> <span class="fu">length</span>(y2)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>               varianza2 <span class="ot">&lt;-</span> <span class="fu">var</span>(y2)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">ifelse</span>(varianza<span class="sc">&gt;</span>varianza2, FCal <span class="ot">&lt;-</span> varianza<span class="sc">/</span>varianza2, FCal <span class="ot">&lt;-</span> varianza2<span class="sc">/</span>varianza)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">ifelse</span>(varianza<span class="sc">&gt;</span>varianza2, gl1 <span class="ot">&lt;-</span> <span class="fu">length</span>(y1)<span class="sc">-</span><span class="dv">1</span>, gl1 <span class="ot">&lt;-</span> <span class="fu">length</span>(y2)<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">ifelse</span>(varianza<span class="sc">&gt;</span>varianza2, gl2 <span class="ot">&lt;-</span> <span class="fu">length</span>(y2)<span class="sc">-</span><span class="dv">1</span>, gl2 <span class="ot">&lt;-</span> <span class="fu">length</span>(y1)<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>               alpha.gorro.f<span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fu">pf</span>(FCal,gl1,gl2)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>               <span class="fu">return</span>(alpha.gorro.f)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>               }</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>contraste.t <span class="ot">&lt;-</span> <span class="cf">function</span>(y1,y2){</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>               media1 <span class="ot">&lt;-</span> <span class="fu">mean</span>(y1); n1<span class="ot">&lt;-</span> <span class="fu">length</span>(y1)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>               varianza <span class="ot">&lt;-</span> <span class="fu">var</span>(y1)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>               media2 <span class="ot">&lt;-</span> <span class="fu">mean</span>(y2); n2<span class="ot">&lt;-</span> <span class="fu">length</span>(y2)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>               varianza2 <span class="ot">&lt;-</span> <span class="fu">var</span>(y2)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>               <span class="fu">ifelse</span>(<span class="fu">contraste.f</span>(y1,y2)<span class="sc">&lt;</span> <span class="fl">0.05</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>               EE.d.diferenc <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(varianza<span class="sc">/</span><span class="fu">length</span>(y1) <span class="sc">+</span> varianza2<span class="sc">/</span><span class="fu">length</span>(y2)),</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>               EE.d.diferenc <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(((varianza<span class="sc">*</span>(n1<span class="dv">-1</span>)<span class="sc">+</span>varianza2<span class="sc">*</span>(n2<span class="dv">-1</span>))<span class="sc">/</span>(n1<span class="sc">+</span>n2<span class="dv">-2</span>))<span class="sc">*</span>(<span class="dv">1</span><span class="sc">/</span>n1 <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span>n2))</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>               )</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>               <span class="fu">ifelse</span>(<span class="fu">contraste.f</span>(y1,y2) <span class="sc">&gt;</span> <span class="fl">0.05</span>, v<span class="ot">&lt;-</span> n1<span class="sc">+</span>n2<span class="dv">-2</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">truc</span>(v <span class="ot">&lt;-</span> (varianza<span class="sc">/</span>n1<span class="sc">+</span>varianza2<span class="sc">/</span>n2)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>(((varianza<span class="sc">/</span>n1)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>(n1<span class="dv">-1</span>))<span class="sc">+</span>((varianza2<span class="sc">/</span>n2)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>(n2<span class="dv">-1</span>))))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                      )</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>               tc <span class="ot">&lt;-</span> (media1<span class="sc">-</span>media2)<span class="sc">/</span>EE.d.diferenc</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>               p <span class="ot">&lt;-</span> <span class="fu">pt</span>(tc,v)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">M1=</span>media1, <span class="at">M2=</span>media2,<span class="at">Varianza=</span>varianza,<span class="at">Varianza2=</span>varianza2, <span class="at">alpha.gorro.F =</span> <span class="fu">contraste.f</span>(y1,y2), <span class="at">EE.d.diferenc =</span> EE.d.diferenc, <span class="at">tc =</span> tc, <span class="at">v =</span> v, <span class="at">Acumulado.de.t =</span> p, <span class="at">dif.crit =</span> <span class="fu">qt</span>(<span class="fl">0.95</span>,v)<span class="sc">*</span>EE.d.diferenc)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(result)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.4</span>, <span class="fl">3.9</span>, <span class="fl">3.3</span>, <span class="fl">2.5</span>, <span class="fl">2.9</span>, <span class="fl">4.07</span>, <span class="fl">3.9</span>, <span class="dv">4</span>, <span class="fl">3.1</span>, <span class="fl">4.2</span>, <span class="fl">3.6</span>, <span class="fl">3.6</span>, <span class="fl">2.7</span>, <span class="fl">3.4</span>, <span class="fl">2.8</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>y2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="fl">1.9</span>, <span class="fl">2.2</span>, <span class="fl">2.2</span>, <span class="fl">4.4</span>, <span class="fl">2.7</span>, <span class="fl">2.6</span>, <span class="fl">2.8</span>, <span class="fl">2.5</span>, <span class="fl">2.3</span>, <span class="fl">1.4</span>, <span class="fl">1.3</span>, <span class="fl">3.4</span>, <span class="fl">2.6</span>, <span class="fl">3.2</span>, <span class="fl">2.9</span>, <span class="fl">2.6</span>, <span class="fl">2.5</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>R <span class="ot">&lt;-</span> <span class="fu">contraste.t</span>(y1,y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Al comparar el nivel de significancia propuesto en 5% contra el nivel se significancia observado, se concluye que el contenido medio de fósforo difiere significativamente entre las parcelas (Nivel de significancia observado, <span class="math inline">\(\hat\alpha\)</span>= 0.0422549).</p>
 <hr>
-<p>Note que si se fija el nivel de significancia en el 5% (<span class="math inline">\(\alpha=0.05\)</span>), el valor del percentil teórico o crítico es <span class="math inline">\(Z_{\alpha}=Z_{0.05}= 1.645\)</span> y cuando se compara con el valor de Z calculado:</p>
-<p><span class="math display">\[¿ Z_c &gt;Z_{\alpha} ?\]</span></p>
-<p>… <span class="math display">\[1.725098 &gt; 1.645\]</span></p>
-<p>Entonces se cuenta con evidencia para rechazar <span class="math inline">\(H_0\)</span>, con un nivel de significancia del 5%.</p>
+<p>Note que si se fija el nivel de significancia en el 5% (<span class="math inline">\(\alpha=0.05\)</span>), el valor del percentil teórico crítico es <span class="math inline">\(t_{\alpha;31}=t_{0.05;31}= 1.695519\)</span> y cuando se compara con el valor de t calculado:</p>
+<p><span class="math display">\[¿ t_c &gt;t_{\alpha} ?\]</span></p>
+<p><span class="math display">\[3.577959 &gt; 1.695519\]</span></p>
+<p>Entonces se cuenta con evidencia para rechazar <span class="math inline">\(H_0\)</span>, con un nivel de significancia del 5%: el tratamiento aplicado a la parcela experimental 1 aumenta el contenido de fósforo en el suelo (Nivel de significancia observado, <span class="math inline">\(\hat\alpha\)</span>= 0.0422549).</p>
 <hr>
-<hr>
-<p>La hipótesis nula será rechazada si la diferencia media observada es superior a 1.546378</p>
-<p>Región de Rechazo para <span class="math inline">\(H_0\)</span></p>
-<p><span class="math display">\[ RR =( \bar x1-\bar x_2 &gt;1.546378)\]</span></p>
-<hr>
-<p><strong>POTENCIA DEL CONTRASTE</strong></p>
-<p>Suponga que se verifica la posibilidad de que el tratamiento esté provocando una aumento en la concentración de fósforo, por ejemplo una unidad.</p>
-<p>Si el verdadero valor de la diferencia media no es cero sino que <span class="math inline">\(\mu_1 -\mu_2= 1\)</span>, …</p>
-<p>…con esto, la probabilidad del error tipo II es:</p>
-<p><span class="math display">\[\beta=P(Error II)=P(\bar x_1-\bar x_2 \lt 1.546378 |_{\mu_1-\mu_2=1})\]</span> <span class="math display">\[\beta=P(Error II)=P(Z&lt;0.5811723)=0.7194378\]</span></p>
-<p>Por lo tanto,</p>
-<p><span class="math display">\[Potencia=1-\beta=P(Rechazar H_0|H_a)\]</span> <span class="math display">\[1-\beta=P(\bar x_1-\bar x_2 \gt 1.546378 |_{\mu_1-\mu_2=1})\]</span> <span class="math display">\[1-\beta=P(Z&gt;0.5811723)=0.2805622\]</span></p>
-<p>Cuando se contraste el juego de hipótesis propuesto, si el aumento en fósforo es de una unidad entre un tratamiento y otro (la diferencia media no es cero sino 1.0), La hipótesis nula será rechazada acertadamente en el 28.05% de la veces.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Power4.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Potencia del Contraste para la diferencia de medias</figcaption>
-</figure>
-</div>
 <hr>
 
 
@@ -576,13 +599,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ej3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Ejemplo 3</span>
+      <a href="./ej4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Ejemplo 4</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ej5.html" class="pagination-link">
-        <span class="nav-page-text">Ejemplo 5</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">Taller</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
