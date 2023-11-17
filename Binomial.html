@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Doc505623 - La verdad o se atreve</title>
+<title>Doc505623 - Binomial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./control02.html" rel="next">
-<link href="./references.html" rel="prev">
+<link href="./control02.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,6 +95,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -74,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./control01.html">La verdad o se atreve</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Binomial.html">Binomial</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -149,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control01.html" class="sidebar-item-text sidebar-link active">
+  <a href="./control01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">La verdad o se atreve</span></a>
   </div>
 </li>
@@ -161,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Binomial.html" class="sidebar-item-text sidebar-link">
+  <a href="./Binomial.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Binomial</span></a>
   </div>
 </li>
@@ -175,7 +210,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#falso-o-verdadero" id="toc-falso-o-verdadero" class="nav-link active" data-scroll-target="#falso-o-verdadero">FALSO o VERDADERO</a></li>
+  <li><a href="#distribución-de-probabilidades-para-el-parámetro-p" id="toc-distribución-de-probabilidades-para-el-parámetro-p" class="nav-link active" data-scroll-target="#distribución-de-probabilidades-para-el-parámetro-p">Distribución de Probabilidades para el parámetro P</a>
+  <ul class="collapse">
+  <li><a href="#esperanza-matemática-de-p" id="toc-esperanza-matemática-de-p" class="nav-link" data-scroll-target="#esperanza-matemática-de-p">Esperanza matemática de p</a></li>
+  <li><a href="#intervalo-de-confianza-para-p" id="toc-intervalo-de-confianza-para-p" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-p">Intervalo de confianza para p</a></li>
+  </ul></li>
+  <li><a href="#contraste-de-hipótesis-para-p" id="toc-contraste-de-hipótesis-para-p" class="nav-link" data-scroll-target="#contraste-de-hipótesis-para-p">Contraste de hipótesis para p</a></li>
+  <li><a href="#distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2" id="toc-distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2" class="nav-link" data-scroll-target="#distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2">Distribución de Probabilidades para la diferencia de parámetros p1-p2</a></li>
+  <li><a href="#intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales" id="toc-intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales">Intervalo de Confianza para la diferencia de proporciones Binomiales</a></li>
+  <li><a href="#contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" id="toc-contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" class="nav-link" data-scroll-target="#contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales">Contraste de hipótesis para la diferencia de proporciones Binomiales</a></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">La verdad o se atreve</h1>
+<h1 class="title">Binomial</h1>
 </div>
 
 
@@ -199,42 +242,153 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<hr>
-<section id="falso-o-verdadero" class="level1 unnumbered">
-<h1 class="unnumbered">FALSO o VERDADERO</h1>
-<hr>
-<ol type="1">
-<li><p>La hipótesis nula (H0) siempre establece que no hay efecto o diferencia entre las poblaciones.</p></li>
-<li><p>Un Valor P pequeño indica que hay evidencia sólida en contra de la hipótesis nula.</p></li>
-<li><p>El nivel de significancia (alfa) se utiliza para controlar la probabilidad de cometer un error tipo II.</p></li>
-<li><p>Si el Valor P es igual al nivel de significancia (alfa), se rechaza la hipótesis nula.</p></li>
-<li><p>La Potencia del contraste mide la probabilidad de cometer un error tipo I.</p></li>
-<li><p>La Potencia del contraste se refiere a la probabilidad de no cometer un error tipo II.</p></li>
-<li><p>A medida que el nivel de significancia (alfa) se reduce, la probabilidad de cometer un error tipo I disminuye.</p></li>
-<li><p>El Valor P es un valor que varía de 0 a 1.</p></li>
-<li><p>Si el Valor P es mayor que el nivel de significancia (alfa), rechazamos la hipótesis nula.</p></li>
-<li><p>La hipótesis nula (H0) es la afirmación que se trata de respaldar con los datos.</p></li>
-<li><p>La Potencia del contraste se incrementa cuando el tamaño de la muestra se reduce.</p></li>
-<li><p>La Potencia del contraste mide la probabilidad de rechazar la hipótesis nula cuando la hipótesis alternativa es verdadera.</p></li>
-<li><p>Si el Valor P es igual al nivel de significancia (alfa), se acepta la hipótesis nula.</p></li>
-<li><p>A medida que el tamaño de la muestra aumenta, la Potencia del contraste tiende a aumentar.</p></li>
-<li><p>El Valor P representa la probabilidad de obtener los mismos resultados en repeticiones del experimento.</p></li>
-<li><p>El Valor P es una medida de la magnitud del efecto observado en los datos.</p></li>
-<li><p>El nivel de significancia (alfa) es una medida de la precisión de los datos.</p></li>
-<li><p>La Potencia del contraste es independiente del nivel de significancia (alfa).</p></li>
-<li><p>En un contraste de hipótesis, un Valor P grande indica que la hipótesis nula es cierta.</p></li>
-<li><p>Si la Potencia del contraste es alta, hay una alta probabilidad de cometer un error tipo I.</p></li>
-<li><p>El Valor P se utiliza para evaluar la evidencia en contra de la hipótesis nula.</p></li>
-<li><p>La Potencia del contraste es una medida de la precisión de la estimación de parámetros poblacionales.</p></li>
-<li><p>La probabilidad de cometer un error tipo II disminuye a medida que la Potencia del contraste aumenta. o</p></li>
-<li><p>Si el Valor P es menor que el nivel de significancia (alfa), se acepta la hipótesis nula.</p></li>
-<li><p>La Potencia del contraste se refiere a la probabilidad de no cometer un error tipo I.</p></li>
-<li><p>El nivel de significancia (alfa) se establece antes de realizar el contraste de hipótesis.</p></li>
-<li><p>La Potencia del contraste es una medida de la confiabilidad de los datos.</p></li>
-<li><p>Si el Valor P es mayor que el nivel de significancia (alfa), se falla en rechazar la hipótesis nula.</p></li>
-<li><p>El Valor P siempre tiene un rango de 0 a 0.05.</p></li>
-<li><p>La Potencia del contraste es independiente del tamaño de la muestra.</p></li>
-</ol>
+<p>La distribución binomial es un modelo estadístico que describe el número de éxitos en una secuencia fija de ensayos independientes, donde cada ensayo tiene exactamente dos resultados posibles: éxito o fracaso. Este modelo es fundamental en la teoría de probabilidad y se utiliza para analizar situaciones en las que se repite un experimento bajo condiciones idénticas.</p>
+<p>La distribución de probabilidades Binomial está caracterizada por dos parámetros, n y p.</p>
+<p>La función de masa de probabilidad (f de p) de la distribución binomial está dada por la ecuación:</p>
+<p><span class="math display">\[ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \]</span></p>
+<p>donde:</p>
+<ul>
+<li><p><span class="math inline">\(P(X = k)\)</span> es la probabilidad de obtener exactamente <span class="math inline">\(k\)</span> éxitos en <span class="math inline">\(n\)</span> ensayos,</p></li>
+<li><p><span class="math inline">\(\binom{n}{k}\)</span> es el coeficiente binomial, que representa el número de formas de elegir <span class="math inline">\(k\)</span> éxitos entre <span class="math inline">\(n\)</span> ensayos,</p></li>
+<li><p><span class="math inline">\(p\)</span> es la probabilidad de éxito en un solo ensayo, y</p></li>
+<li><p><span class="math inline">\((1-p)\)</span> es la probabilidad de fracaso en un solo ensayo.</p></li>
+</ul>
+<p>Un ejemplo numérico podría ser el siguiente: Supongamos que se están evaluando dos vacunas, A y B, para determinar su efectividad en la prevención de una enfermedad. Se sabe que la probabilidad de éxito (efectividad) de la vacuna A es del 80% y de la vacuna B es del 75%. Si se administran 10 dosis de cada vacuna, podemos calcular la probabilidad de obtener un número específico de éxitos.</p>
+<p>Por ejemplo, la probabilidad de que la vacuna A tenga exactamente 8 éxitos en 10 dosis se calcularía mediante la ecuación binomial:</p>
+<p><span class="math inline">\(P(X = 8) = \binom{10}{8} (0.8)^8 (0.2)^2= 0.3019899\)</span></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">8</span>,<span class="dv">10</span>,.<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3019899</code></pre>
+</div>
+</div>
+<p>De manera similar, la probabilidad para la vacuna B se calcularía con los parámetros correspondientes. Este modelo permite analizar y comparar la efectividad de diferentes vacunas en un contexto estadístico.</p>
+<p><strong>Ejemplo 1</strong></p>
+<p>Suponga que la vacuna B previene la aparición de la “influensa de newyork”. Si en Titiribí se aplicaron 78 dosis de esta vacuna (B) y, en este grupo vacunado se observaron 23 individuos infectados. ¿Existe evedencia que permita establecer que la efectividad de la vacuna B es del 75%?</p>
+<section id="distribución-de-probabilidades-para-el-parámetro-p" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-de-probabilidades-para-el-parámetro-p">Distribución de Probabilidades para el parámetro P</h2>
+<p>Si <span class="math inline">\(X\)</span> es una variable aleatoria que tiene distribución de probabilidad Binomial, y con esto,</p>
+<p><span class="math inline">\(E(x)=\mu_x=np\)</span></p>
+<p><span class="math inline">\(\sigma^2(x)=npq\)</span>,</p>
+<p>entonces cuando <span class="math inline">\(n \to \infty\)</span>,<br>
+<span class="math inline">\(X \dot \sim \eta(\mu_x=np;\sigma^2(x)=npq)\)</span></p>
+<section id="esperanza-matemática-de-p" class="level3">
+<h3 class="anchored" data-anchor-id="esperanza-matemática-de-p">Esperanza matemática de p</h3>
+<p>El mejor estimador de <span class="math inline">\(p\)</span> es <span class="math inline">\(\hat p= \frac{x}{n}\)</span></p>
+<p>Note que,</p>
+<p><span class="math inline">\(E(\hat p)= E(\frac{x}{n})= \frac{1}{n}E(x)= \frac{1}{n}np=p\)</span></p>
+<p><span class="math inline">\(\hat p\)</span> es insesgado para estimar a <span class="math inline">\(p\)</span>.</p>
+<p>Con realción a la Varianza de p, se tiene que</p>
+<p><span class="math inline">\(Var(\hat p)= Var(\frac{x}{n})= \frac{1}{n^2}Var(x)= \frac{1}{n^2}npq=\frac{pq}{n}\)</span></p>
+<p>Si se cumplen las condiciones de “buen tamaño de muestra” (para poder considerar que se cumple el teorema del límite central) o de simetría, entonces <span class="math inline">\(p\)</span> tiene distribución de probabilidades:</p>
+<p><span class="math display">\[\hat p \dot \sim \eta \left ( p \;;\frac{pq}{n}\right )\]</span></p>
+<p>El estadístico</p>
+<p><span class="math display">\[Z_c=\frac{\hat p-p}{\sqrt{\frac{pq}{n}} } \dot\sim \;\eta \ ( 0; 1 )\]</span></p>
+</section>
+<section id="intervalo-de-confianza-para-p" class="level3">
+<h3 class="anchored" data-anchor-id="intervalo-de-confianza-para-p">Intervalo de confianza para p</h3>
+<p>Si se fija un Coeficiente de Confianza de <span class="math inline">\(1-\alpha\)</span>, entonces</p>
+<p><span class="math display">\[p \in \left (\hat p - Z_{\alpha/2}\sqrt{\frac{\hat p \hat q}{n}}; \;\;\;\; \hat p +Z_{\alpha/2}\sqrt{\frac{\hat p\hat q}{n}}\right ) al \;\; (1-\alpha)100\%\]</span></p>
+<p>Solución al ejemplo 1.</p>
+<p>Según la información muestral, <span class="math inline">\(\hat p_B=\frac{55}{78}=0.7051282\)</span></p>
+<p>Un Intervalo de Confianza al 95% para el parámetro <span class="math inline">\(p_B\)</span> tiene la forma:</p>
+<p><span class="math display">\[p \in \left (0.7051282  -1.959964\sqrt{\frac{0.7051282*0.2948718}{78}}; \;\;\;\; 0.7051282 +1.959964\sqrt{\frac{0.7051282*0.2948718}{78}}\right ) al \;\; (1-\alpha)100\%\]</span></p>
+<p><span class="math display">\[p_B \in \left (0.603935 ; 0.8063214 \right ) al \;\; 95\%\]</span></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">78</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">55</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">55</span><span class="sc">/</span><span class="dv">78</span>; q <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">-</span>p</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>li <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">qnorm</span>(.<span class="dv">025</span>)<span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>q<span class="sc">/</span>n)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ls <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">qnorm</span>(.<span class="dv">975</span>)<span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>q<span class="sc">/</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="contraste-de-hipótesis-para-p" class="level2">
+<h2 class="anchored" data-anchor-id="contraste-de-hipótesis-para-p">Contraste de hipótesis para p</h2>
+$$
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p \le p_0&amp;&amp;&amp; \\
+H_a: p \gt p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp;Z_c&gt;Z_\alpha&amp;P(Z&gt;Z_c) \\
+
+H_0: p \ge p_0&amp;&amp;&amp; \\
+H_a: p \lt p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp;Z_c&lt;-Z_\alpha&amp;P(Z&lt;Z_c) \\
+
+H_0: p = p_0&amp;&amp;&amp; \\
+H_a: p \ne p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
+\hline \\
+
+\end{array}\]</span>
+<p>$$</p>
+</section>
+<section id="distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2">Distribución de Probabilidades para la diferencia de parámetros p1-p2</h2>
+<p>Bajo condiciones <em>“favorables”</em> la diferencia de proporcines Binomiales tiene distribución aproximadamente normal.</p>
+<p><span class="math display">\[\hat p_1-\hat{p_2}\;\; \dot \sim \;\;\eta \;\;\left ( p_1-p_2\;\;;\;\;\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}\right )\]</span></p>
+<p>El estadístico también tiene distibución normal estándar</p>
+<p><span class="math display">\[Z_c=\frac{(\hat p_1-\hat p_1)-(p_1-p_2)}{\sqrt{\frac{\hat p_1 \hat q_1}{n_1}+\frac{\hat p_2 \hat q_2}{n_2}} } \dot\sim \;\eta \ ( 0; 1 )\]</span></p>
+</section>
+<section id="intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales" class="level2">
+<h2 class="anchored" data-anchor-id="intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales">Intervalo de Confianza para la diferencia de proporciones Binomiales</h2>
+<p>Si se fija un Coeficiente de Confianza de <span class="math inline">\(1-\alpha\)</span>, entonces</p>
+<p><span class="math display">\[p_1-p_2 \in \left (\hat p_1 -\hat p_1 \pm Z_{\alpha/2}\sqrt{\frac{\hat p_1 \hat q_1}{n_1}+\frac{\hat p_2 \hat q_2}{n_2}}\; \right ) al \;\; (1-\alpha)100\%\]</span></p>
+</section>
+<section id="contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" class="level2">
+<h2 class="anchored" data-anchor-id="contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales">Contraste de hipótesis para la diferencia de proporciones Binomiales</h2>
+$$
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p_1 \le p_2&amp;&amp;&amp; \\
+H_a: p_1 \gt p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
+\frac{1}{n_1}+\frac{1}{n_2})}}&amp;Z_c&gt;Z_\alpha&amp;P(Z&gt;Z_c) \\
+
+H_0: p_1 \ge p_2&amp;&amp;&amp; \\
+H_a: p_1 \lt p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
+\frac{1}{n_1}+\frac{1}{n_2})}}&amp;Z_c&lt;-Z_\alpha&amp;P(Z&lt;Z_c) \\
+
+H_0: p_1 = p_2&amp;&amp;&amp; \\
+H_a: p_1\ne p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
+\frac{1}{n_1}+\frac{1}{n_2})}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
+
+&amp;\hat p=\frac{x_1+x_2}{n_1+n_2} &amp;&amp; \\
+\hline \\
+\end{array}\]</span>
+<p>$$</p>
+<p><em>Ejemplo 2</em></p>
+<p>Suponga que se ha desarrollado una nueva vacuna alternativa a la vacuna A, la vacuna B.</p>
+<p>Si con base en dos muestras aleatorias se obtubo la siguiente información:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Infectados</td>
+<td>26</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>Número de casos</td>
+<td>106</td>
+<td>125</td>
+</tr>
+</tbody>
+</table>
+<p>¿Se ceunta con evidencia para establecer que la nueva vacuna, Vacuna B, es mejor que la vacuna A?</p>
 
 
 </section>
@@ -489,14 +643,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./references.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Taller</span>
+      <a href="./control02.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Explique sin tartamudear</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./control02.html" class="pagination-link">
-        <span class="nav-page-text">Explique sin tartamudear</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
