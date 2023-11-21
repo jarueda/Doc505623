@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Doc505623 - Resumen</title>
+<title>Taller y resumen para el parcial sobre Inferencia - Resumen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Doc505623</a> 
+      <a href="./">Taller y resumen para el parcial sobre Inferencia</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Prefacio</span></a>
+ <span class="menu-text">Introducción</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -145,6 +145,18 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ej6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ejemplo Binomial 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ej7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binomial 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Taller</span></a>
   </div>
@@ -171,10 +183,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#tipos-de-error" id="toc-tipos-de-error" class="nav-link active" data-scroll-target="#tipos-de-error">Tipos de Error</a>
+  <li><a href="#tipos-de-error" id="toc-tipos-de-error" class="nav-link active" data-scroll-target="#tipos-de-error">Tipos de Error</a></li>
+  <li><a href="#valor-p" id="toc-valor-p" class="nav-link" data-scroll-target="#valor-p">Valor p</a></li>
+  <li><a href="#resumen-de-criterios-para-realizar-contraste-de-hipótesis" id="toc-resumen-de-criterios-para-realizar-contraste-de-hipótesis" class="nav-link" data-scroll-target="#resumen-de-criterios-para-realizar-contraste-de-hipótesis">Resumen de criterios para realizar Contraste de Hipótesis</a>
   <ul class="collapse">
-  <li><a href="#valor-p" id="toc-valor-p" class="nav-link" data-scroll-target="#valor-p">Valor p:</a></li>
+  <li><a href="#para-la-media-con-z" id="toc-para-la-media-con-z" class="nav-link" data-scroll-target="#para-la-media-con-z">Para la media con Z</a></li>
+  <li><a href="#para-la-media-con-t" id="toc-para-la-media-con-t" class="nav-link" data-scroll-target="#para-la-media-con-t">Para la media con t</a></li>
+  <li><a href="#para-la-varianza-chi-cuadrado" id="toc-para-la-varianza-chi-cuadrado" class="nav-link" data-scroll-target="#para-la-varianza-chi-cuadrado">Para la varianza, Chi-cuadrado</a></li>
+  <li><a href="#para-el-cociente-de-varianzas-f" id="toc-para-el-cociente-de-varianzas-f" class="nav-link" data-scroll-target="#para-el-cociente-de-varianzas-f">Para el cociente de varianzas, F</a></li>
+  <li><a href="#para-medias-con-t-homocedasticidad" id="toc-para-medias-con-t-homocedasticidad" class="nav-link" data-scroll-target="#para-medias-con-t-homocedasticidad">Para medias con t, Homocedasticidad</a></li>
+  <li><a href="#para-medias-con-t-heterocedasticidad" id="toc-para-medias-con-t-heterocedasticidad" class="nav-link" data-scroll-target="#para-medias-con-t-heterocedasticidad">Para medias con t, Heterocedasticidad</a></li>
+  <li><a href="#contraste-de-hipótesis-para-p-en-el-modelo-binomial" id="toc-contraste-de-hipótesis-para-p-en-el-modelo-binomial" class="nav-link" data-scroll-target="#contraste-de-hipótesis-para-p-en-el-modelo-binomial">Contraste de hipótesis para p en el modelo Binomial</a></li>
   </ul></li>
+  <li><a href="#contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" id="toc-contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" class="nav-link" data-scroll-target="#contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales">Contraste de hipótesis para la diferencia de proporciones Binomiales</a></li>
   </ul>
 </nav>
     </div>
@@ -205,10 +226,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Una región de rechazo para la <span class="math inline">\(H_0\)</span>, constituida por el conjunto de valores del estadístico de prueba que tiene baja probabilidad de ocurrencia si se está cumpliendo la hipótesis nula.</li>
 </ul>
 <p>Independientemente de la calidad de la metodología en la colección de la información o de la veracidad de los supuestos, quien investiga SIEMPRE está en riesgo de cometer algún tipo de error. El método tiene la ventaja de tener bajo control el error experimental.</p>
-<section id="tipos-de-error" class="level1">
-<h1>Tipos de Error</h1>
-<p><span class="math display">\[
-\begin{array}{ll|c|c}
+<section id="tipos-de-error" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-error">Tipos de Error</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Al realizar cualquier Contraste siempre es posible cometer algún tipo de error">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Al realizar cualquier Contraste siempre es posible cometer algún tipo de error
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{ll|c|c} \hline
 &amp;&amp;H_0 \;es \; cierta&amp;H_a \;es \; cierta&amp; \\ \hline
 &amp;Rechazo \; H_0 &amp; Error \; I &amp; Decisión \;correcta\\
 &amp;&amp;(\alpha)&amp;(1-\beta) \\
@@ -216,21 +246,40 @@ DATOS&amp;&amp;&amp;\\
 &amp;No \;Rechazo \; H_0  &amp; Decisión \;correcta &amp; Error \; II\\
 &amp;&amp;(1-\alpha)&amp;(\beta) \\
 \hline
-\end{array}
-\]</span> <strong>El nivel de significancia</strong>, <span class="math inline">\(\alpha\)</span> está definido como la máxima probabilidad de cometer el error tipo I. Esto es:</p>
+\end{array}\]</span>
+</div>
+</div>
+<p><strong>El nivel de significancia</strong>, <span class="math inline">\(\alpha\)</span> está definido como la máxima probabilidad de cometer el error tipo I. Esto es:</p>
 <p><span class="math display">\[\alpha=_{Máx}P(Error \;tipo\;I)=P(Rechazar\; H_0\; dado\;que\; H_0\; es \;verdadera)\]</span></p>
 <p>Este valor siempre es propuesto por quien realiza el contraste de hipótesis, en valores relativamente cercanos a cero.</p>
 <p>La probabilidad del error tipo II se define como <span class="math inline">\(\beta\)</span></p>
 <p><span class="math display">\[\beta(\theta_a)=P(Error \;tipo\;II)=P(No \;Rechazar\; H_0\; dado\;que\; H_a\; es \;verdadera)\]</span> <em>Potencia del contraste</em></p>
 <p><span class="math display">\[Potencia(\theta_a)=1-\beta=P(Rechazar \; H_0\; dado\;que\; H_a\; es \;verdadera)\]</span></p>
 <p>Note que el valor de la significancia, propuesa por quien investiga, solo es un límite o una declaración de la propención al riesgo de quien toma la decisión; la determinación del error tipo II solo puede ser estimada cuando se establece un supuesto valor del parámetro en el escenario de <span class="math inline">\(H_a\)</span>. Con esto, es necesario establecer un valor del parámetro bajo <span class="math inline">\(H_a\)</span> para poder estimar a <span class="math inline">\(\beta\)</span> y Potencia.</p>
+</section>
 <section id="valor-p" class="level2">
-<h2 class="anchored" data-anchor-id="valor-p">Valor p:</h2>
+<h2 class="anchored" data-anchor-id="valor-p">Valor p</h2>
 <p>Valor P = P_Value = <span class="math inline">\(\hat \alpha\)</span> = Significancia Observada</p>
 <p>El valor p es una medida que se utiliza en el contraste de hipótesis para evaluar la evidencia en contra de la hipótesis nula. La hipótesis nula (denotada como <span class="math inline">\(H_0\)</span>) es una afirmación inicial que se somete a prueba y se asume cierta a menos que la muestra aleatoria demuestre lo contrario. La hipótesis alternativa (denotada como <span class="math inline">\(H_1\)</span> o <span class="math inline">\(H_a\)</span>) representa la afirmación que se está tratando de respaldar con los datos.</p>
-<p>En general, el valor P es el nivel de significancia mínima que conduce al rechazo de la Hipótesis nula; es la probabilidad de existencia del estadístico de prueba, si se está cumpliendo la hipótesis nula. Con esto, mientras más grande sea el valor P, más creible resulta la <span class="math inline">\(H_0\)</span>. Mientras más pequeño sea el valor P, más evidencia se cuenta en contra de la <span class="math inline">\(H_0\)</span>, más contundente es el rechazo de <span class="math inline">\(H_0\)</span>.</p>
+<p>En general, el valor P es el nivel de significancia mínima que conduce al rechazo de la Hipótesis nula; es la probabilidad de existencia del estadístico de prueba, si se está cumpliendo la hipótesis nula. Con esto, mientras más grande sea el valor P, más creible resulta la <span class="math inline">\(H_0\)</span>.</p>
+<div class="callout callout-style-default callout-caution callout-titled" title="Valor P = P_Value = $\hat \alpha$ = Significancia Observada">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Valor P = P_Value = <span class="math inline">\(\hat \alpha\)</span> = Significancia Observada
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Mientras más pequeño sea el valor P, más evidencia se cuenta en contra de la <span class="math inline">\(H_0\)</span>; más contundente es el rechazo de <span class="math inline">\(H_0\)</span>.</p>
+</div>
+</div>
+</div>
 <p><span class="math display">\[
-\begin{array}{l|c}
+\begin{array}{l|c} \hline
 &amp;Hipótesis \;alterna &amp; \hat \alpha = Valor \; P \\ \hline
 &amp;H_a: \theta \gt \theta_0 &amp; P(Estadístico \;de\; Prueba \gt V.A.) \\
 &amp;&amp;&amp;\\
@@ -240,8 +289,21 @@ DATOS&amp;&amp;&amp;\\
 \hline
 \end{array}
 \]</span></p>
-<p><strong>Formulas para Contrastes de Hipótesis</strong></p>
-$$
+</section>
+<section id="resumen-de-criterios-para-realizar-contraste-de-hipótesis" class="level2">
+<h2 class="anchored" data-anchor-id="resumen-de-criterios-para-realizar-contraste-de-hipótesis">Resumen de criterios para realizar Contraste de Hipótesis</h2>
+<section id="para-la-media-con-z" class="level3">
+<h3 class="anchored" data-anchor-id="para-la-media-con-z">Para la media con Z</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para la media en poblaciones normales, grandes muestras o varianza conocida">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para la media en poblaciones normales, grandes muestras o varianza conocida
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <span class="math display">\[\begin{array}{lclc}
 \hline
 \\ \\
@@ -256,6 +318,23 @@ H_0:\mu = \mu_0&amp;&amp;&amp; \\
 H_a:\mu \ne \mu_0&amp;Z_c=\frac{\bar x-\mu_0}{\frac{\sigma}{\sqrt n}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
 \hline \\
 
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para la diferencia de medias en poblaciones normales, grandes muestras o varianza conocida">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para la diferencia de medias en poblaciones normales, grandes muestras o varianza conocida
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0:\mu_1 \le \mu_2 \; \; &amp;&amp;&amp; \\
 H_a:\mu_1 \gt \mu_2 &amp;Z_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}&amp;Z_c&gt;Z_{\alpha}&amp;P(Z &gt;t_c) \\
 
@@ -264,9 +343,30 @@ H_a:\mu_1 \lt \mu_2&amp;Z_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{\sigma_1^
 
 H_0:\mu_1 = \mu_2&amp;&amp;&amp; \\
 H_a:\mu_1 \ne \mu_2&amp;Z_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z &gt; \lvert Z_c \lvert) \\ \hline
-&amp;d_0 \;es\; la\; diferencia\; supuesta \; entre \; medias\; en \; H_0. \;Si \;se\; suponen\; iguales\; d_0=0 &amp;&amp;
 \hline \\
-\hline \\
+\end{array}\]</span>
+<ul>
+<li><span class="math inline">\(d_0\)</span> es la diferencia supuesta entre medias en <span class="math inline">\(H_0\)</span>. Si se suponen iguales <span class="math inline">\(d_0=0\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="para-la-media-con-t" class="level3">
+<h3 class="anchored" data-anchor-id="para-la-media-con-t">Para la media con t</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para la media para muestras pequeñas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para la media para muestras pequeñas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 
 H_0:\mu \le \mu_0&amp;&amp;&amp; \\
 H_a:\mu \gt \mu_0&amp;t_c=\frac{\bar x-\mu_0}{\frac{S}{\sqrt n}}&amp;t_c&gt;t_{n-1;\alpha}&amp;P(t_{n-1}&gt;t_c) \\
@@ -278,27 +378,99 @@ H_0:\mu = \mu_0&amp;&amp;&amp; \\
 H_a:\mu \ne \mu_0&amp;t_c=\frac{\bar x-\mu_0}{\frac{S}{\sqrt n}}&amp;\lvert t_c \lvert &gt;t_{n-1;\frac{\alpha}{2}}&amp;2*P(t_{n-1}&gt;\lvert t_c \lvert) \\
 
 \hline \\
-
+\end{array}\]</span>
+</div>
+</div>
+</section>
+<section id="para-la-varianza-chi-cuadrado" class="level3">
+<h3 class="anchored" data-anchor-id="para-la-varianza-chi-cuadrado">Para la varianza, Chi-cuadrado</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para la varianza en poblaciones normales">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para la varianza en poblaciones normales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0:\sigma^2 = \sigma_0^2 &amp;&amp;&amp; \\
-H_a:\sigma^2 \ne \sigma_0^2 &amp; \chi ^2_c=\frac{(n-1)S_1^2}{\sigma_0^2}&amp; \chi ^2_{n-1;1-\alpha/2}&lt;\chi ^2_c \; \;o \; \;\chi ^2_{n-1;\alpha/2}&gt;\chi ^2_c \; \;&amp;
-
+H_a:\sigma^2 \ne \sigma_0^2 &amp; \chi ^2_c=\frac{(n-1)S_1^2}{\sigma_0^2}&amp; \chi ^2_{n-1;1-\alpha/2}&lt;\chi ^2_c \; \;o \; \;\chi ^2_{n-1;\alpha/2}&gt;\chi ^2_c \; \;&amp; - \\
 
 \hline \\
-\hline \\
-
+\end{array}\]</span>
+</div>
+</div>
+</section>
+<section id="para-el-cociente-de-varianzas-f" class="level3">
+<h3 class="anchored" data-anchor-id="para-el-cociente-de-varianzas-f">Para el cociente de varianzas, F</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para el cociente  de varianzas en poblaciones normales">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para el cociente de varianzas en poblaciones normales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0:\sigma_1^2 = \sigma_2^2 &amp;&amp;&amp; \\
 H_a:\sigma_1^2 \ne \sigma_2^2&amp;F_c=\frac{S_1^2}{S_2^2}&amp;
-F_c &gt;f_{n_1-1;n_2-1;\alpha/2}\;o\;si\;F_c &lt;f_{n_1-1;n_2-1;1-\alpha/2}
+F_c &gt;f_{n_1-1;n_2-1;\alpha/2}\;o\;si\;F_c &lt;f_{n_1-1;n_2-1;1-\alpha/2} &amp; -
 \\
 \hline \\
-\hline \\
-
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para el cociente  de varianzas en poblaciones normales">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para el cociente de varianzas en poblaciones normales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0:\sigma_1^2 = \sigma_2^2 &amp;&amp;&amp; \\
 H_a:\sigma_1^2 \ne \sigma_2^2&amp;F_c=\frac{S_1^2}{S_2^2}&amp;F_c &gt;f_{n_1-1;n_2-1;\alpha}&amp;P(f_{n_1-1;n_2-1}&gt;F_c) \\
-&amp;Siempre \; que \; S_1^2 &gt; S_2^2&amp;&amp; \\
-\hline \\
-\hline \\
 
+\hline \\
+\end{array}\]</span>
+<ul>
+<li>Siempre que <span class="math inline">\(S_1^2 &gt; S_2^2\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="para-medias-con-t-homocedasticidad" class="level3">
+<h3 class="anchored" data-anchor-id="para-medias-con-t-homocedasticidad">Para medias con t, Homocedasticidad</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para la diferencia de medias en poblaciones normales, muestras pequeñas,  varianzas homogéneas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para la diferencia de medias en poblaciones normales, muestras pequeñas, varianzas homogéneas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 
 H_0:\mu_1 \le \mu_2 \; \; &amp;&amp;&amp; \\
 H_a:\mu_1 \gt \mu_2 &amp;t_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{S_p^2}{n_1}+\frac{S_p^2}{n_2}}}&amp;t_c&gt;t_{n_1+n_2-2;\alpha}&amp;P(t_{n_1+n_2-2}&gt;t_c) \\
@@ -311,8 +483,26 @@ H_a:\mu_1 \ne \mu_2&amp;t_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{S_p^2}{n_
 &amp;S_p^2=\frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}&amp;&amp;
 \hline \\
 \hline \\
-
-
+\end{array}\]</span>
+</div>
+</div>
+</section>
+<section id="para-medias-con-t-heterocedasticidad" class="level3">
+<h3 class="anchored" data-anchor-id="para-medias-con-t-heterocedasticidad">Para medias con t, Heterocedasticidad</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste para la diferencia de medias con muestras pequeñas, varianzas heterogéneas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste para la diferencia de medias con muestras pequeñas, varianzas heterogéneas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0:\mu_1 \le \mu_2&amp;&amp;&amp; \\
 H_a:\mu_1 \gt \mu_2 &amp;t_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}}&amp;t_c&gt;t_{v;\alpha}&amp;P(t_v&gt;t_c) \\
 
@@ -324,12 +514,146 @@ H_a:\mu_1 \ne \mu_2&amp;t_c=\frac{(\bar x_1-\bar x_2)-d_0}{\sqrt{\frac{S_1^2}{n_
 &amp;&amp; v=\frac{ \left ( \frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}\right)^2}{\frac{\left (\frac{S_1^2}{n_1}\right)^2}{n_1-1}+\frac{\left (\frac{S_2^2}{n_2}\right)^2}{n_2-1}}&amp;  \\
 \hline \\
 \hline \\
-
 \end{array}\]</span>
-<p>$$</p>
-
-
+</div>
+</div>
 </section>
+<section id="contraste-de-hipótesis-para-p-en-el-modelo-binomial" class="level3">
+<h3 class="anchored" data-anchor-id="contraste-de-hipótesis-para-p-en-el-modelo-binomial">Contraste de hipótesis para p en el modelo Binomial</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste unilateral a la derecha para el parámetro p">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste unilateral a la derecha para el parámetro p
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p \le p_0&amp;&amp;&amp; \\
+H_a: p \gt p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp;Z_c&gt;Z_\alpha&amp;P(Z&gt;Z_c) \\
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste unilateral a la izquierda para el parámetro p">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste unilateral a la izquierda para el parámetro p
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p \ge p_0&amp;&amp;&amp; \\
+H_a: p \lt p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp;Z_c&lt;-Z_\alpha&amp;P(Z&lt;Z_c) \\
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste bilateral para el parámetro p">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste bilateral para el parámetro p
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p = p_0&amp;&amp;&amp; \\
+H_a: p \ne p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<p>–</p>
+</section>
+</section>
+<section id="contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" class="level2">
+<h2 class="anchored" data-anchor-id="contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales">Contraste de hipótesis para la diferencia de proporciones Binomiales</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste unilateral a la derecha para la diferencia entre parámetros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste unilateral a la derecha para la diferencia entre parámetros
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p_1 \le p_2&amp;&amp;&amp; \\
+H_a: p_1 \gt p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
+\frac{1}{n_1}+\frac{1}{n_2})}}&amp;Z_c&gt;Z_\alpha&amp;P(Z&gt;Z_c) \\
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste unilateral ala izquierda para la diferencia de parámetros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste unilateral ala izquierda para la diferencia de parámetros
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p_1 \ge p_2&amp;&amp;&amp; \\
+H_a: p_1 \lt p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
+\frac{1}{n_1}+\frac{1}{n_2})}}&amp;Z_c&lt;-Z_\alpha&amp;P(Z&lt;Z_c) \\
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contraste Bilateral para la diferencia de parámetros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contraste Bilateral para la diferencia de parámetros
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
+H_0: p_1 = p_2&amp;&amp;&amp; \\
+H_a: p_1\ne p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
+\frac{1}{n_1}+\frac{1}{n_2})}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
+
+&amp;\hat p=\frac{x_1+x_2}{n_1+n_2} &amp;&amp; \\
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<hr>
+<hr>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -583,7 +907,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefacio</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introducción</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

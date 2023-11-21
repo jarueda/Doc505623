@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Doc505623 - Binomial</title>
+<title>Taller y resumen para el parcial sobre Inferencia - Binomial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Doc505623</a> 
+      <a href="./">Taller y resumen para el parcial sobre Inferencia</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -137,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Prefacio</span></a>
+ <span class="menu-text">Introducción</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -212,11 +212,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#distribución-de-probabilidades-para-el-parámetro-p" id="toc-distribución-de-probabilidades-para-el-parámetro-p" class="nav-link active" data-scroll-target="#distribución-de-probabilidades-para-el-parámetro-p">Distribución de Probabilidades para el parámetro P</a>
   <ul class="collapse">
-  <li><a href="#esperanza-matemática-de-p" id="toc-esperanza-matemática-de-p" class="nav-link" data-scroll-target="#esperanza-matemática-de-p">Esperanza matemática de p</a></li>
+  <li><a href="#esperanza-matemática-del-estimador-de-p" id="toc-esperanza-matemática-del-estimador-de-p" class="nav-link" data-scroll-target="#esperanza-matemática-del-estimador-de-p">Esperanza matemática del estimador de p</a></li>
   <li><a href="#intervalo-de-confianza-para-p" id="toc-intervalo-de-confianza-para-p" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-p">Intervalo de confianza para p</a></li>
   </ul></li>
   <li><a href="#contraste-de-hipótesis-para-p" id="toc-contraste-de-hipótesis-para-p" class="nav-link" data-scroll-target="#contraste-de-hipótesis-para-p">Contraste de hipótesis para p</a></li>
-  <li><a href="#distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2" id="toc-distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2" class="nav-link" data-scroll-target="#distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2">Distribución de Probabilidades para la diferencia de parámetros p1-p2</a></li>
+  <li><a href="#distribución-de-probabilidades-para-la-diferencia-de-proporciones-binomiales" id="toc-distribución-de-probabilidades-para-la-diferencia-de-proporciones-binomiales" class="nav-link" data-scroll-target="#distribución-de-probabilidades-para-la-diferencia-de-proporciones-binomiales">Distribución de Probabilidades para la diferencia de proporciones Binomiales</a></li>
   <li><a href="#intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales" id="toc-intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales">Intervalo de Confianza para la diferencia de proporciones Binomiales</a></li>
   <li><a href="#contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" id="toc-contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" class="nav-link" data-scroll-target="#contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales">Contraste de hipótesis para la diferencia de proporciones Binomiales</a></li>
   </ul>
@@ -246,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La distribución de probabilidades Binomial está caracterizada por dos parámetros, n y p.</p>
 <p>La función de masa de probabilidad (f de p) de la distribución binomial está dada por la ecuación:</p>
 <p><span class="math display">\[ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \]</span></p>
-<p>donde:</p>
+<p>donde: - <span class="math inline">\(X=0, 1, 2,3,...,n\)</span></p>
 <ul>
 <li><p><span class="math inline">\(P(X = k)\)</span> es la probabilidad de obtener exactamente <span class="math inline">\(k\)</span> éxitos en <span class="math inline">\(n\)</span> ensayos,</p></li>
 <li><p><span class="math inline">\(\binom{n}{k}\)</span> es el coeficiente binomial, que representa el número de formas de elegir <span class="math inline">\(k\)</span> éxitos entre <span class="math inline">\(n\)</span> ensayos,</p></li>
@@ -271,18 +271,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="distribución-de-probabilidades-para-el-parámetro-p" class="level2">
 <h2 class="anchored" data-anchor-id="distribución-de-probabilidades-para-el-parámetro-p">Distribución de Probabilidades para el parámetro P</h2>
 <p>Si <span class="math inline">\(X\)</span> es una variable aleatoria que tiene distribución de probabilidad Binomial, y con esto,</p>
-<p><span class="math inline">\(E(x)=\mu_x=np\)</span></p>
-<p><span class="math inline">\(\sigma^2(x)=npq\)</span>,</p>
-<p>entonces cuando <span class="math inline">\(n \to \infty\)</span>,<br>
-<span class="math inline">\(X \dot \sim \eta(\mu_x=np;\sigma^2(x)=npq)\)</span></p>
-<section id="esperanza-matemática-de-p" class="level3">
-<h3 class="anchored" data-anchor-id="esperanza-matemática-de-p">Esperanza matemática de p</h3>
+<p><span class="math display">\[E(x)=\mu_x=np\]</span></p>
+<p><span class="math display">\[\sigma_x^2=npq\]</span>,</p>
+<p>entonces cuando <span class="math inline">\(n \to \infty\)</span>,</p>
+<p><span class="math display">\[X \dot \sim \eta(\mu_x=np\;; \;\sigma_x^2=npq)\]</span></p>
+<section id="esperanza-matemática-del-estimador-de-p" class="level3">
+<h3 class="anchored" data-anchor-id="esperanza-matemática-del-estimador-de-p">Esperanza matemática del estimador de p</h3>
 <p>El mejor estimador de <span class="math inline">\(p\)</span> es <span class="math inline">\(\hat p= \frac{x}{n}\)</span></p>
 <p>Note que,</p>
-<p><span class="math inline">\(E(\hat p)= E(\frac{x}{n})= \frac{1}{n}E(x)= \frac{1}{n}np=p\)</span></p>
-<p><span class="math inline">\(\hat p\)</span> es insesgado para estimar a <span class="math inline">\(p\)</span>.</p>
+<p><span class="math display">\[E(\hat p)= E(\frac{x}{n})=  \frac{1}{n}E(x)= \frac{1}{n}np=p\]</span></p>
+<p>Por lo que <span class="math inline">\(\hat p\)</span> es insesgado para estimar a <span class="math inline">\(p\)</span>.</p>
 <p>Con realción a la Varianza de p, se tiene que</p>
-<p><span class="math inline">\(Var(\hat p)= Var(\frac{x}{n})= \frac{1}{n^2}Var(x)= \frac{1}{n^2}npq=\frac{pq}{n}\)</span></p>
+<p><span class="math display">\[Var(\hat p)= Var(\frac{x}{n})=  \frac{1}{n^2}Var(x)= \frac{1}{n^2}npq=\frac{pq}{n}\]</span></p>
 <p>Si se cumplen las condiciones de “buen tamaño de muestra” (para poder considerar que se cumple el teorema del límite central) o de simetría, entonces <span class="math inline">\(p\)</span> tiene distribución de probabilidades:</p>
 <p><span class="math display">\[\hat p \dot \sim \eta \left ( p \;;\frac{pq}{n}\right )\]</span></p>
 <p>El estadístico</p>
@@ -295,42 +295,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Solución al ejemplo 1.</p>
 <p>Según la información muestral, <span class="math inline">\(\hat p_B=\frac{55}{78}=0.7051282\)</span></p>
 <p>Un Intervalo de Confianza al 95% para el parámetro <span class="math inline">\(p_B\)</span> tiene la forma:</p>
-<p><span class="math display">\[p \in \left (0.7051282  -1.959964\sqrt{\frac{0.7051282*0.2948718}{78}}; \;\;\;\; 0.7051282 +1.959964\sqrt{\frac{0.7051282*0.2948718}{78}}\right ) al \;\; (1-\alpha)100\%\]</span></p>
+<p><span class="math display">\[p_B \in \left (0.7051282  -1.959964\sqrt{\frac{0.7051282*0.2948718}{78}}; \;\;\;\; 0.7051282 +1.959964\sqrt{\frac{0.7051282*0.2948718}{78}}\right ) al \;\; (1-\alpha)100\%\]</span></p>
 <p><span class="math display">\[p_B \in \left (0.603935 ; 0.8063214 \right ) al \;\; 95\%\]</span></p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">78</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">55</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="dv">55</span><span class="sc">/</span><span class="dv">78</span>; q <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">-</span>p</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>li <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">qnorm</span>(.<span class="dv">025</span>)<span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>q<span class="sc">/</span>n)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ls <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">qnorm</span>(.<span class="dv">975</span>)<span class="sc">*</span><span class="fu">sqrt</span>(p<span class="sc">*</span>q<span class="sc">/</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<p>Según esta estimación, la efectividad de la vacuna B se encuentra en el intervalodescrito y es cercana a 75%.</p>
 </section>
 </section>
 <section id="contraste-de-hipótesis-para-p" class="level2">
 <h2 class="anchored" data-anchor-id="contraste-de-hipótesis-para-p">Contraste de hipótesis para p</h2>
-$$
+<div class="callout callout-style-default callout-tip callout-titled" title="Contrate unilateral a la derecha">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contrate unilateral a la derecha
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <span class="math display">\[\begin{array}{lclc}
 \hline
 \\ \\
 Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0: p \le p_0&amp;&amp;&amp; \\
 H_a: p \gt p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp;Z_c&gt;Z_\alpha&amp;P(Z&gt;Z_c) \\
-
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contrate unilateral a la izquierda">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contrate unilateral a la izquierda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0: p \ge p_0&amp;&amp;&amp; \\
 H_a: p \lt p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp;Z_c&lt;-Z_\alpha&amp;P(Z&lt;Z_c) \\
-
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contrate bilateral">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contrate bilateral
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0: p = p_0&amp;&amp;&amp; \\
 H_a: p \ne p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
 \hline \\
-
 \end{array}\]</span>
-<p>$$</p>
+</div>
+</div>
+<p><strong>Ejemplo 2</strong></p>
+<p>Suponga que una semilla debe ser tratada con un compuesto químico para que se produzca la germinación. Según el proveedor, este compuesto hace que en el período de 15 días germinen el 80% de las semillas. Si en un ensayo se tratan 200 semillas y a los 15 días se ha producido la germinación de 144 semillas ¿Existe evidencia para establecer que el compuesto tiene la efectividad que declara el proveedor?</p>
+<p>Asuma que se contrasta el juego de hipótesis</p>
+<p><span class="math display">\[H_0: p = 0.8\]</span> <span class="math display">\[H_a: p \ne 0.8\]</span></p>
+<p>Estimamos la estidística de prueba</p>
+<p><span class="math inline">\(Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}=\frac{0.72 -0.8}{\sqrt \frac{0.8*0.2}{200}}=-2.828427\)</span></p>
+<p><span class="math inline">\(\hat\alpha=2*P(Z&gt;\lvert Z_c\lvert)=2*P(Z&gt;2.828427)=2*0.002338868=0.004677737\)</span></p>
+<p>No existe evidencia para establecer que, a los 15 días germina el 80% de las semillas (<span class="math inline">\(\hat\alpha=0.004677737\)</span>)</p>
+<p><em>Tarea</em></p>
+<p>Contraste el juego de hipótesis</p>
+<p><span class="math display">\[H_0: p \ge 0.8\]</span> <span class="math display">\[H_a: p \lt 0.8\]</span></p>
 </section>
-<section id="distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2" class="level2">
-<h2 class="anchored" data-anchor-id="distribución-de-probabilidades-para-la-diferencia-de-parámetros-p1-p2">Distribución de Probabilidades para la diferencia de parámetros p1-p2</h2>
+<section id="distribución-de-probabilidades-para-la-diferencia-de-proporciones-binomiales" class="level2">
+<h2 class="anchored" data-anchor-id="distribución-de-probabilidades-para-la-diferencia-de-proporciones-binomiales">Distribución de Probabilidades para la diferencia de proporciones Binomiales</h2>
 <p>Bajo condiciones <em>“favorables”</em> la diferencia de proporcines Binomiales tiene distribución aproximadamente normal.</p>
 <p><span class="math display">\[\hat p_1-\hat{p_2}\;\; \dot \sim \;\;\eta \;\;\left ( p_1-p_2\;\;;\;\;\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}\right )\]</span></p>
 <p>El estadístico también tiene distibución normal estándar</p>
@@ -339,11 +384,21 @@ H_a: p \ne p_0&amp;Z_c=\frac{\hat p -p_0}{\sqrt \frac{\hat p_0\hat q_0}{ n}}&amp
 <section id="intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales" class="level2">
 <h2 class="anchored" data-anchor-id="intervalo-de-confianza-para-la-diferencia-de-proporciones-binomiales">Intervalo de Confianza para la diferencia de proporciones Binomiales</h2>
 <p>Si se fija un Coeficiente de Confianza de <span class="math inline">\(1-\alpha\)</span>, entonces</p>
-<p><span class="math display">\[p_1-p_2 \in \left (\hat p_1 -\hat p_1 \pm Z_{\alpha/2}\sqrt{\frac{\hat p_1 \hat q_1}{n_1}+\frac{\hat p_2 \hat q_2}{n_2}}\; \right ) al \;\; (1-\alpha)100\%\]</span></p>
+<p><span class="math display">\[p_1-p_2 \in \left (\hat p_1 -\hat p_1 \pm Z_{\alpha/2}\sqrt{\frac{\hat p_1 \hat q_1}{n_1}+\frac{\hat p_2 \hat q_2}{n_2}}\; \right ) al \;\; (1-\alpha)100\%
+\]</span></p>
 </section>
 <section id="contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales" class="level2">
 <h2 class="anchored" data-anchor-id="contraste-de-hipótesis-para-la-diferencia-de-proporciones-binomiales">Contraste de hipótesis para la diferencia de proporciones Binomiales</h2>
-$$
+<div class="callout callout-style-default callout-tip callout-titled" title="Contrate unilateral a la derecha para la diferencia entre parámetros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contrate unilateral a la derecha para la diferencia entre parámetros
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <span class="math display">\[\begin{array}{lclc}
 \hline
 \\ \\
@@ -351,11 +406,45 @@ Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; cr
 H_0: p_1 \le p_2&amp;&amp;&amp; \\
 H_a: p_1 \gt p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
 \frac{1}{n_1}+\frac{1}{n_2})}}&amp;Z_c&gt;Z_\alpha&amp;P(Z&gt;Z_c) \\
-
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contrate unilateral ala izquierda para la diferencia de parámetros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contrate unilateral ala izquierda para la diferencia de parámetros
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0: p_1 \ge p_2&amp;&amp;&amp; \\
 H_a: p_1 \lt p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
 \frac{1}{n_1}+\frac{1}{n_2})}}&amp;Z_c&lt;-Z_\alpha&amp;P(Z&lt;Z_c) \\
-
+\hline \\
+\end{array}\]</span>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Contrate Bilateral para la diferencia de parámetros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contrate Bilateral para la diferencia de parámetros
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{array}{lclc}
+\hline
+\\ \\
+Juego \; de \; hipótesis &amp; Estadístico \; de \; prueba &amp; Región \; crítica &amp; Valor \;P \\ \hline
 H_0: p_1 = p_2&amp;&amp;&amp; \\
 H_a: p_1\ne p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
 \frac{1}{n_1}+\frac{1}{n_2})}}&amp; \lvert Z_c \lvert &gt;Z_{\frac{\alpha}{2}}&amp;2*P(Z&gt; \lvert Z_c \lvert) \\ \hline \hline
@@ -363,32 +452,22 @@ H_a: p_1\ne p_2&amp;Z_c=\frac{\hat p_1 - \hat p_2}{\sqrt {\hat p\hat q (
 &amp;\hat p=\frac{x_1+x_2}{n_1+n_2} &amp;&amp; \\
 \hline \\
 \end{array}\]</span>
-<p>$$</p>
+</div>
+</div>
+<hr>
 <p><em>Ejemplo 2</em></p>
 <p>Suponga que se ha desarrollado una nueva vacuna alternativa a la vacuna A, la vacuna B.</p>
 <p>Si con base en dos muestras aleatorias se obtubo la siguiente información:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>A</th>
-<th>B</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Infectados</td>
-<td>26</td>
-<td>21</td>
-</tr>
-<tr class="even">
-<td>Número de casos</td>
-<td>106</td>
-<td>125</td>
-</tr>
-</tbody>
-</table>
-<p>¿Se ceunta con evidencia para establecer que la nueva vacuna, Vacuna B, es mejor que la vacuna A?</p>
+<p><span class="math display">\[\begin{array}{|l|c|c|} \hline
+Vacuna  &amp; A  &amp; B \\ \hline
+Infectados &amp; 26 &amp; 21  \\ \hline
+Número \;de \; casos &amp; 106 &amp; 125 \\ \hline
+\end{array}
+\]</span> ¿Se cuenta con evidencia para establecer que la nueva vacuna, la vacuna B, es mejor que la vacuna A?</p>
+<hr>
+<p>Suponga que una semilla debe ser tratada con un compuesto químico para que, a los 15 días, se produzca la germinación. Este compuesto hace que en el período germinen el 80% de las semillas. Un grupo de estudiantes desarrollaron una sustancia orgánica alternativa que, supuestamente, produce una geminación más rápida. Si con la nueva sustancia se tratan 200 semillas y a los 15 días se ha producido la germinación de 174 semillas ¿Existe evidencia para establecer que el compusto desarrollado aumenta la velocidad de germinación?</p>
+<p>Asuma que se contrasta el juego de hipótesis</p>
+<p><span class="math display">\[H_0: p = 0.8\]</span> <span class="math display">\[H_a: p \ne 0.8\]</span></p>
 
 
 </section>
